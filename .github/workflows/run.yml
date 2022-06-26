@@ -23,9 +23,9 @@ jobs:
     - name: Checkin
       run: |
         cookie='${{ secrets.COOKIE }}'
-        push='${{ secrets.PUSHKEY }}'
+        # push='${{ secrets.PUSHKEY }}'
 
         python3 aihao.py <<EOF
         ${cookie}
-        ${push}
+        # ${push}
         EOF
