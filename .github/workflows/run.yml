@@ -1,0 +1,31 @@
+name: aihaoCheckin
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: 10 0,5,10 * * *
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install Python
+      run: |
+        sudo apt update && \
+        sudo apt install python3
+        
+    - name: Checkin
+      run: |
+        cookie='${{ secrets.COOKIE }}'
+        push='${{ secrets.PUSHKEY }}'
+
+        python3 aihao.py <<EOF
+        ${cookie}
+        ${push}
+        EOF
