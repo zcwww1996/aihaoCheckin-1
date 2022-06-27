@@ -15,6 +15,7 @@ if(cookie == ""):
    cookie = input("cookie:")
    # push_key = input("push:")
 
+print("\n")
 url = 'https://www.aihao.cc/plugin.php?id=daka'
 # push = 'https://sc.ftqq.com/' + push_key + '.send?text=aihao_checkin_error'
 
