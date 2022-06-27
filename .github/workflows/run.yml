@@ -1,4 +1,4 @@
-name: aihaoCheckin
+name: aihaoCheckin-1
 
 on:
   push:
