@@ -1,7 +1,15 @@
 from urllib import request, parse
+import time
+from datetime import datetime
+import pytz
+
+tz = pytz.timezone('Asia/Shanghai') #东八区
+t = datetime.fromtimestamp(int(time.time()),
+    pytz.timezone('Asia/Shanghai')).strftime('%Y-%m-%d %H:%M:%S %Z%z')
+print(t)
 
 cookie = ""
-push_key = ""
+# push_key = ""
 
 if(cookie == ""):
    cookie = input("cookie:")
